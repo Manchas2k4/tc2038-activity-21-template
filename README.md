@@ -24,7 +24,7 @@ El programa recibe el nombre de un archivo de texto, seguido de un número enter
 La salida es una cadena de longitud *N*/4 que es la representación hexadecimal de aplicación de una función de dispersión al archivo de texto. La función de dispersión se explica a continuación:
 - El número entero *N* determina el número de columnas que contendrá una tabla donde ser irán acomodando los caracteres del archivo de texto (incluyendo los saltos de línea) en los renglones que sean necesarios.
 - Si el número de caracterez en el archivo de entrada no es múltiplo de *N*, el último renglón se deberá rellenar con el valor de *N*.
-- Para cada renglón, se deberá aplicar la siguiente función de dispersión H(renglo) = la suma de los ASCII de cada caracter en el renglón) % 256.
+- Para cada renglón, se deberá aplicar la siguiente función de dispersión H(renglón) = la suma de los ASCII de cada caracter en el renglón) % 256.
 
 La salida se genera concatenando la representación hexadecimal (*mayúsculas*) a dos dígitos de cada renglón.
 
