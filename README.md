@@ -15,7 +15,7 @@ En este repositorio encontrarás el archivo "main.cpp". En este archivo deberás
 Implementa, <span style="text-decoration-line: underline;">en equipos de 2 personas (máximo)</span>, una solución para el problema que se describe a continuación.
 
 ## <span style="color: rgb(26, 99, 169);">**Descripción**</span>
-En esta actividad, deberá generar el código de redundancia cíclica (CRC) para un archivo de texto.  El CRC es un código de detección de errores usado frecuentemente en redes digitales y en dispositivos de almacenamiento para detectar cambios accidentales en los datos. En este casi, emplearemos una función de hash para generar este código.
+En esta actividad, deberá generar el código de redundancia cíclica (CRC) para un archivo de texto.  El CRC es un código de detección de errores usado frecuentemente en redes digitales y en dispositivos de almacenamiento para detectar cambios accidentales en los datos. En este casi, emplearemos una función de hash para generar este código. ([Manejo de archivos](https://www2.eii.uva.es/fund_inf/cpp/temas/10_ficheros/ficheros_cpp.html))
 
 ## <span style="color: rgb(26, 99, 169);">**Entrada**</span>
 El programa recibe el nombre de un archivo de texto, seguido de un número entero, *N*, múltiplo de 4 (4 <= *N* <= 64).
