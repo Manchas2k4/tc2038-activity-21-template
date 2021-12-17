@@ -1,1 +1,1 @@
-quijote1.txt 40
+quijote1.txt 32

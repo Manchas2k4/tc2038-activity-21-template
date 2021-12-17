@@ -1,5 +1,5 @@
 ![Tec de Monterrey](images/logotecmty.png)
-# Actividad 1.2 Implementación de la técnica de programación "Programación dinámica" y "algoritmos avaros"
+# Actividad 2.1 Implementación de "Hash String"
 
 ## <span style="color: rgb(26, 99, 169);">¿Qué tengo que hacer?</span>
 En este repositorio encontrarás el archivo "main.cpp". En este archivo deberás desarrollar la implementación del problema presentado en esta actividad.  En la parte superior del archivo coloca, en comentarios, tus datos. Por ejemplo:
@@ -12,52 +12,30 @@ En este repositorio encontrarás el archivo "main.cpp". En este archivo deberás
 // Date: 01/01/2021
 // =========================================================
 ```
-Implementa, <span style="text-decoration-line: underline;">de forma individual</span>, un solución para el conjunto de problemas que se describen a continuación.
+Implementa, <span style="text-decoration-line: underline;">en equipos de 2 personas (máximo)</span>, una solución para el problema que se describe a continuación.
 
 ## <span style="color: rgb(26, 99, 169);">**Descripción**</span>
-Utilizando las técnicas de **Programación Dinámica** y **Algoritmos Ávidos**, desarrollar en equipos de 2 personas, máximo, un programa en C++ que resuelva el problema de cambio de monedas.
+En esta actividad, deberá generar el código de redundancia cíclica (CRC) para un archivo de texto.  El CRC es un código de detección de errores usado frecuentemente en redes digitales y en dispositivos de almacenamiento para detectar cambios accidentales en los datos. En este casi, emplearemos una función de hash para generar este código.
 
 ## <span style="color: rgb(26, 99, 169);">**Entrada**</span>
-El programa recibe número entero, *N*, seguido de *N* valores enteros que representan las diferentes denominaciones disponibles de las monedas. A continuación, se recibe *Q*, seguido de *Q* valores enteros que representan los cambios que se tienen calcular.
+El programa recibe el nombre de un archivo de texto, seguido de un número entero, *N*, múltiplo de 4 (4 <= *N* <= 64).
 
 ## <span style="color: rgb(26, 99, 169);">**Salida**</span>
-El programa deberá desplegar para cada una de las *Q* consultas, la cantidad de monedas que se requieren con la solución **Ávida**, así cómo el número de monedas de la denominación requeridas, **ordenadas de menor a mayor**. En seguida, se deplegará la información que genera la solución de **Programación Dinámica**. Cada consulta estará separada con una línea de 10 guiones medios. Revisa el formato de salida que se presenta a continuación.
+La salida es una cadena de longitud *N*/4 que es la representación hexadecimal de aplicación de una función de dispersión al archivo de texto. La función de dispersión se explica a continuación:
+- El número entero *N* determina el número de columnas que contendrá una tabla donde ser irán acomodando los caracteres del archivo de texto (incluyendo los saltos de línea) en los renglones que sean necesarios.
+- Si el número de caracterez en el archivo de entrada no es múltiplo de *N*, el último renglón se deberá rellenar con el valor de *N*.
+- Para cada renglón, se deberá aplicar la siguiente función de dispersión H(renglo) = la suma de los ASCII de cada caracter en el renglón) % 256.
+
+La salida se genera concatenando la representación hexadecimal (*mayúsculas*) a dos dígitos de cada renglón.
 
 ## <span style="color: rgb(26, 99, 169);">**Ejemplo de entrada**</span>
 ```
-3
-1 3 4
-3
-3 11 10
+quijote1.txt 4
 ```
 
 ## <span style="color: rgb(26, 99, 169);">**Ejemplo de salida**</span>
 ```
-QUERY #1, CHANGE = 3
-GREEDY SOLUTION, TOTAL COINS = 1
-CURRENCY = 3 AMOUNT = 1
-
-DP SOLUTION, TOTAL COINS = 1
-CURRENCY = 3 AMOUNT = 1
----------
-QUERY #2, CHANGE = 11
-GREEDY SOLUTION, TOTAL COINS = 3
-CURRENCY = 3 AMOUNT = 1
-CURRENCY = 4 AMOUNT = 2
-
-DP SOLUTION, TOTAL COINS = 3
-CURRENCY = 3 AMOUNT = 1
-CURRENCY = 4 AMOUNT = 2
----------
-QUERY #3, CHANGE = 10
-GREEDY SOLUTION, TOTAL COINS = 4
-CURRENCY = 1 AMOUNT = 2
-CURRENCY = 4 AMOUNT = 2
-
-DP SOLUTION, TOTAL COINS = 3
-CURRENCY = 3 AMOUNT = 2
-CURRENCY = 4 AMOUNT = 1
----------
+14816F15A15512F19A11517116C1A611D1B41621A81A51291091AD16C1B1FD16416016B19A15A16015C15B1601621B517214615A1AC16916415D19FB019B1611AD12F1441A81091A316115A1671491B712E1A61601601611A811114816E17F19A1C416E1561A71191B11601781AE1241A915F1B1161DD19C1AC16E1601AD1221C51A516016B1641BE109170192161F11BE15814614A1AD16216915F1A41251AA1581601B116015F15A1B512016017B1B31B6EE1601651281741601581581BE1A11591651961601281B316A15515D16211813114F17615716414F16715619710916E1AB1A8E51641B615816BF41A414415C16E1B0E517017814C1AD1291A813215915C1B41441631A9E917019F14E16319CF51AF14F14A1491681BE16019816116915F1AB1501481331571571AE1BE15A1161AA1091A41241B21671661C812515C1AC19B10215715A15215E1001B51571A316B16714F16E1A71B014E14F190C813519913215816C1581661AB1531AA14D15F1631CA16915E1B1157EB1B117016416B1711AA1C016A1B91AB16B14E1501B515B16B16419BDA19915E14716716C1BE1651611641BE1671B611D16816B15F1501A815313F11D16B1951231C715810D1B11001A
 
 ```
 
